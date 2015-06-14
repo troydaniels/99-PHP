@@ -1,12 +1,11 @@
 <?php
-//Function that returns the last but one element of a list
-//(prior implementations show returning last two elements)
+//Function that returns the last but one elements of an array
 function lastTwo(array $a){
    $items=count($a);
-   $i=0;
+   $i=1;
    $secondLast=array();
    foreach($a as $key=>$value){
-      if($items>2 && ($i == $items-2 || $i == $items-1)){
+      if($items>2 && ($i == $items-1 || $i == $items)){
          $secondLast[$key]=$value;
       }
      $i++;
