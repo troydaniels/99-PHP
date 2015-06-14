@@ -3,12 +3,12 @@
 //As all arrays in PHP are hashes, this function will reverse the order of the
 //values, and assign them back to the keys
 function reverse(array $a){
-   $keys=array_values($a);
+   $values=array_values($a);
    $items=count($a);
    $reversedArray=array();
    $i=1;
    foreach($a as $key=>$value){
-      $reversedArray[$key]=$keys[$items-$i];
+      $reversedArray[$key]=$valuess[$items-$i];
       $i++;
    }
    return $reversedArray;
