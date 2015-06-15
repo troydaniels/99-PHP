@@ -1,5 +1,5 @@
 <?php
-//Function that returns the last element of a list
+//Function that returns the last element of an array
 function last(array $a){
    $items=count($a);
    $last=NULL;
