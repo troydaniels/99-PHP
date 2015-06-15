@@ -1,6 +1,6 @@
 <?php
 //Eliminate consecutive duplicates of array elements
-//This implementaion maintains keys
+//This implementaion maintains keys of the first element for a particular value
 function compress(array $a){
    $last=NULL;
    $compArray=array();

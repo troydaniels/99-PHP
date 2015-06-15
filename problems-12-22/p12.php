@@ -10,7 +10,7 @@ function decode($a){
          }
       }else{
          $decodedArray[]=$a[$i];
-      }  
+      }
    }
    return $decodedArray;
 }

@@ -6,14 +6,12 @@ function runLengthEncode(array $a){
    $items=count($a);
    $keys=array_keys($a);
    for($i=0; $i<$items; $i++){
-      $k=1;                                 //Run counter
-      $subArray=array($k=>$a[$keys[$i]]);
-      for($j=$i+1; $j<$items; $j++){
-         if($a[$keys[$i]]==$a[$keys[$j]]){
-            unset($subArray[$k]);
-            $subArray[++$k]=$a[$keys[$i]];  //Increment run counter
-            $i++;
-         }
+      $j=1;                                 //Run counter
+      $subArray=array($j=>$a[$keys[$i]]);
+      while($i+1<$items && $a[$keys[$i]]==$a[$keys[$i+1]]){
+         unset($subArray[$j]);
+         $subArray[++$j]=$a[$keys[$i]];
+         $i++;
       }
       $encodedArray[]=$subArray;            //Add run to encoding
       unset($subArray);

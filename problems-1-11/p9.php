@@ -7,11 +7,9 @@ function packArray(array $a){
    $keys=array_keys($a);
    for($i=0; $i<$items; $i++){
       $subArray=array($keys[$i]=>$a[$keys[$i]]);
-      for($j=$i+1; $j<$items; $j++){
-         if($a[$keys[$i]]==$a[$keys[$j]]){
-            $subArray[$keys[$j]]=$a[$keys[$j]];
+      while($i+1<$items && $a[$keys[$i]]==$a[$keys[$i+1]]){
+            $subArray[$keys[$i+1]]=$a[$keys[$i+1]];
             $i++;
-         }
       }
       $packedArray[]=$subArray;
       unset($subArray);
