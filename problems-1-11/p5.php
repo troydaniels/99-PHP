@@ -8,7 +8,7 @@ function reverse(array $a){
    $reversedArray=array();
    $i=1;
    foreach($a as $key=>$value){
-      $reversedArray[$key]=$valuess[$items-$i];
+      $reversedArray[$key]=$values[$items-$i];
       $i++;
    }
    return $reversedArray;
