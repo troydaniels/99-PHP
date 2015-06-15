@@ -1,5 +1,5 @@
 <?php
-//Remove the K'th element from a list
+//Remove the K'th element from an array
 function removeAt(array $a, $element){
    $position=1;
    $result=array();
