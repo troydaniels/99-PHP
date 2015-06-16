@@ -1,0 +1,27 @@
+<?php
+//Split an array into two parts; the length of the first part is given
+//Do not use any predefined predicates
+//This implementation maintains keys
+function splitArray(array $a, $splitNumber){
+   $splitArray=$first=$second=array();
+   $position=0;
+   foreach($a as $key=>$value){
+      while($splitnumber--){
+         $first[$key]=$value;
+         continue;
+      }
+      $second[$key]=$value;
+   }
+   $splitArray[]=$first;
+   $splitArray[]=$second;
+   return $splitArray;
+}
+
+//Tests
+$b=array(1,2,3,4,5);
+assert(splitArray($b, 2)==array(array(1=>1,2=>2),array(3=>3,4=>4,5=>5)));
+$c=array('hi'=>'ho', 'he'=>'ho');
+assert(splitArray($c, 1)==array(array('hi'=>'ho'), array('he'=>'ho'));
+$d=array();
+assert(splitArray($d, 10)==$d);
+?>
