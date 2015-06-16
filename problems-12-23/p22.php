@@ -1,6 +1,6 @@
 <?php
 //Create an array containing all integers within a given range.
-//If first argument is smaller than second, produce an array in decreasing order.
+//If first argument is larger than second, produce an array in decreasing order.
 function arrayRange($a, $b){
    $step=($a<$b)?1:-1;
    $result=array();
